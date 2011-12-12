@@ -39,6 +39,16 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+"" Swap
+set nobackup " do not keep backups after close
+set nowritebackup " do not keep a backup while working
+set noswapfile " don't keep swp files either
+set backupdir=$HOME/vim_files/backup " store backups under ~/.vim/backup
+set backupcopy=yes " keep attributes of original file
+set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
+set directory=~/vim_files/swap,~/tmp,. " keep swp files under ~/.vim/swap
+
+
 " Toggle spell checking on and off with `,s`
 let mapleader = ","
 nmap <silent> <leader>s :set spell!<CR>
