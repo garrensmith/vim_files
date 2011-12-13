@@ -13,19 +13,15 @@ Bundle 'cucumber.zip'
 Bundle 'ruby.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Solarized'
-Bundle 'javascript.vim'
-Bundle 'vim-coffee-script'
 Bundle 'Command-T'
-Bundle 'jade.vim'
+Bundle 'digitaltoad/vim-jade'
 
-filetype plugin indent on     " required! 
+filetype plugin indent on
 
-set nocompatible
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 set number                      " Show line numbers
-filetype plugin indent on       " load file type plugins + indentation
 
 "" Whitespace
 set nowrap                      " don't wrap lines
