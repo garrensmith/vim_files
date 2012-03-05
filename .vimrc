@@ -15,6 +15,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Solarized'
 Bundle 'Command-T'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'bbommarito/vim-slim'
+Bundle 'jimenezrick/vimerl'
 
 filetype plugin indent on
 
@@ -48,6 +50,7 @@ set directory=~/vim_files/swap,~/tmp,. " keep swp files under ~/.vim/swap
 " Toggle spell checking on and off with `,s`
 let mapleader = ","
 nmap <silent> <leader>s :set spell!<CR>
+nmap <leader>ct :CommandTFlush<CR>
 
 " Set region to US English
 set spelllang=en_us
