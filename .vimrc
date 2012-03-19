@@ -17,8 +17,8 @@ Bundle 'Command-T'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'bbommarito/vim-slim'
 Bundle 'jimenezrick/vimerl'
-Bundle 'groenewege/vim-less'
-Bundle 'briancollins/vim-jst'
+""Bundle 'groenewege/vim-less'
+""Bundle 'briancollins/vim-jst'
 
 filetype plugin indent on
 
