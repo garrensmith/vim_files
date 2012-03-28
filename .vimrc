@@ -48,11 +48,36 @@ set backupcopy=yes " keep attributes of original file
 set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
 set directory=~/vim_files/swap,~/tmp,. " keep swp files under ~/.vim/swap
 
+" highlight trailing whitespace
+set list listchars=trail:·,tab:>-
 
 " Toggle spell checking on and off with `,s`
 let mapleader = ","
 nmap <silent> <leader>s :set spell!<CR>
 nmap <leader>ct :CommandTFlush<CR>
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" detect filetypes
+" use set ft= instead of setf to ensure these
+" filetypes take precedence.
+au BufRead,BufNewFile *.ronn set ft=markdown
+au BufRead,BufNewFile {Cap,Gem,Vagrant}file,.autotest,*.ru set ft=ruby
+au BufRead,BufNewFile Procfile,.bundle/config,.gemrc set ft=yaml
+au BufRead,BufNewFile *.sbt set ft=scala
+au BufRead,BufNewFile *.json set ft=javascript
+
+" disable cindent for JavaScript for sane indentation.
+au FileType javascript setlocal nocindent sw=4 sts=4
+
+" ignore certain standard directories
+set wildignore+=*/vendor/bundler/*,*/.git/*,*/.hg/*,*/.bundle/*,*/vendor/cache/*,*/coverage/*,*.class,*.jar
 
 " Set region to US English
 set spelllang=en_us
