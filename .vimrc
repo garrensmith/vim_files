@@ -17,7 +17,7 @@ Bundle 'Command-T'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'bbommarito/vim-slim'
 Bundle 'jimenezrick/vimerl'
-""Bundle 'groenewege/vim-less'
+Bundle 'groenewege/vim-less'
 ""Bundle 'briancollins/vim-jst'
 
 filetype plugin indent on
@@ -86,11 +86,13 @@ set spelllang=en_us
 :syntax on
 " colorscheme vividchalk 
 syntax enable
-set background=dark
+" set background=dark
 if has('gui_running')
 else
+set t_Co=256
 let g:solarized_termcolors=256
 end
+
 colorscheme solarized
 
 " Line Wrapping ***************************************************************
