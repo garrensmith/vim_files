@@ -1,0 +1,16 @@
+snippet d [des] describe("...". function() { ... });
+	describe("${1:description}", function() {
+		${2}
+	});${3}
+
+snippet db [desc] describe("...". function() { beforeEach()... });
+	describe('${1:when...}', function () {
+		beforeEach(function () {
+			${2}
+		});
+	});
+
+snippet it [it] it("..", function () { });
+	it('${1:should...}', function () {
+		${2}
+	});

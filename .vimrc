@@ -8,7 +8,6 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 Bundle "tsaleh/vim-supertab"
-Bundle "rails.vim"
 Bundle 'cucumber.zip'
 Bundle 'ruby.vim'
 Bundle 'scrooloose/nerdtree'
@@ -17,7 +16,11 @@ Bundle 'Command-T'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'bbommarito/vim-slim'
 Bundle 'jimenezrick/vimerl'
+Bundle 'tpope/vim-rails'
 Bundle 'groenewege/vim-less'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'snipMate'
 ""Bundle 'briancollins/vim-jst'
 
 filetype plugin indent on
@@ -55,8 +58,6 @@ set list listchars=trail:·,tab:>-
 let mapleader = ","
 nmap <silent> <leader>s :set spell!<CR>
 nmap <leader>ct :CommandTFlush<CR>
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -72,12 +73,14 @@ au BufRead,BufNewFile {Cap,Gem,Vagrant}file,.autotest,*.ru set ft=ruby
 au BufRead,BufNewFile Procfile,.bundle/config,.gemrc set ft=yaml
 au BufRead,BufNewFile *.sbt set ft=scala
 au BufRead,BufNewFile *.json set ft=javascript
+au BufNewFile,BufRead *[Ss]pec.js,*SpecHelper.js set filetype=jasmine.javascript
+au BufNewFile,BufRead *[Ss]pec.coffee,*SpecHelper.coffee set filetype=jasmine.coffee
 
 " disable cindent for JavaScript for sane indentation.
-au FileType javascript setlocal nocindent sw=4 sts=4
+"au FileType javascript setlocal nocindent sw=4 sts=4
 
 " ignore certain standard directories
-set wildignore+=*/vendor/bundler/*,*/.git/*,*/.hg/*,*/.bundle/*,*/vendor/cache/*,*/coverage/*,*.class,*.jar
+set wildignore+=*/vendor/bundler/*,*/.git/*,*/.hg/*,*/.bundle/*,*/vendor/cache/*,*/coverage/*,*.class,*.jar,*/tmp/**,*/deps/**,*/node_modules/*
 
 " Set region to US English
 set spelllang=en_us
@@ -86,7 +89,7 @@ set spelllang=en_us
 :syntax on
 " colorscheme vividchalk 
 syntax enable
-" set background=dark
+set background=dark
 if has('gui_running')
 else
 set t_Co=256
@@ -117,6 +120,9 @@ let NERDTreeHijackNetrw=1
 " Single click for everything
 let NERDTreeMouseMode=1
 let NERDTreeShowHidden=1
+
+let g:ctrlp_map = '<leader>p'
+let g:ctrlp_working_path_mode = 2
 
 if has("gui_macvim")
     let macvim_hig_shift_movement = 1
