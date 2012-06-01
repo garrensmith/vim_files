@@ -80,7 +80,7 @@ au BufNewFile,BufRead *[Ss]pec.coffee,*SpecHelper.coffee set filetype=jasmine.co
 "au FileType javascript setlocal nocindent sw=4 sts=4
 
 " ignore certain standard directories
-set wildignore+=*/vendor/bundler/*,*/.git/*,*/.hg/*,*/.bundle/*,*/vendor/cache/*,*/coverage/*,*.class,*.jar,*/tmp/**,*/deps/**,*/node_modules/*
+set wildignore+=*/vendor/bundler/*,*/.git/*,*/.hg/*,*/.bundle/*,*/vendor/cache/*,*/coverage/*,*.class,*.jar,*/tmp/**,*/public/lesson/**,*/uploads/**,*/tmp/lesson/**,*/deps/**,*/node_modules/*
 
 " Set region to US English
 set spelllang=en_us
