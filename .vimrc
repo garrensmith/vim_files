@@ -73,6 +73,7 @@ au BufRead,BufNewFile {Cap,Gem,Vagrant}file,.autotest,*.ru set ft=ruby
 au BufRead,BufNewFile Procfile,.bundle/config,.gemrc set ft=yaml
 au BufRead,BufNewFile *.sbt set ft=scala
 au BufRead,BufNewFile *.json set ft=javascript
+au BufRead,BufNewFile *.mustache set ft=html
 au BufNewFile,BufRead *[Ss]pec.js,*SpecHelper.js set filetype=jasmine.javascript
 au BufNewFile,BufRead *[Ss]pec.coffee,*SpecHelper.coffee set filetype=jasmine.coffee
 
