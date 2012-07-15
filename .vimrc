@@ -21,6 +21,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'snipMate'
+Bundle 'skammer/vim-css-color'
 ""Bundle 'briancollins/vim-jst'
 
 filetype plugin indent on
