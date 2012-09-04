@@ -12,16 +12,17 @@ Bundle 'cucumber.zip'
 Bundle 'ruby.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Solarized'
-Bundle 'Command-T'
+" Bundle 'Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'bbommarito/vim-slim'
 Bundle 'jimenezrick/vimerl'
 Bundle 'tpope/vim-rails'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
 Bundle 'snipMate'
 Bundle 'skammer/vim-css-color'
+Bundle 'mklabs/vim-backbone'
 ""Bundle 'briancollins/vim-jst'
 
 filetype plugin indent on
@@ -58,7 +59,10 @@ set list listchars=trail:·,tab:>-
 " Toggle spell checking on and off with `,s`
 let mapleader = ","
 nmap <silent> <leader>s :set spell!<CR>
-nmap <leader>ct :CommandTFlush<CR>
+"nmap <leader>ct :CommandTFlush<CR>
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_working_path_mode = 'rc'
+nmap <leader>t :CtrlP<CR>
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
