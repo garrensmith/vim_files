@@ -21,7 +21,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'snipMate'
-Bundle 'skammer/vim-css-color'
 Bundle 'mklabs/vim-backbone'
 ""Bundle 'briancollins/vim-jst'
 
@@ -135,8 +134,14 @@ if has("gui_macvim")
   " GUI is running or is about to start.
   " Maximize gvim window.
   set lines=999 columns=999
+  Bundle 'skammer/vim-css-color'
     
 endif
+
+" make ruby easier to find /usr/bin/ruby
+ if !empty($MY_RUBY_HOME)
+  let g:ruby_path = join(split(glob($MY_RUBY_HOME.'/usr/bin/ruby/*.*')."\n".glob($MY_RUBY_HOME.'/lib/ruby/site_ruby/*'),"\n"),',')
+ endif
 
 
 
