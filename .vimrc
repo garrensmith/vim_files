@@ -12,7 +12,6 @@ Bundle 'cucumber.zip'
 Bundle 'ruby.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Solarized'
-" Bundle 'Command-T'
 Bundle 'kien/ctrlp.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'bbommarito/vim-slim'
@@ -22,7 +21,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'snipMate'
 Bundle 'mklabs/vim-backbone'
-""Bundle 'briancollins/vim-jst'
 
 filetype plugin indent on
 
@@ -102,6 +100,14 @@ let g:solarized_termcolors=256
 end
 
 colorscheme solarized
+
+"Copy and paste more sane
+" Yank text to the OS X clipboard
+ noremap <leader>y "*y
+ noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 " Line Wrapping ***************************************************************
 " set nowrap
