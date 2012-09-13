@@ -20,7 +20,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'snipMate'
-Bundle 'mklabs/vim-backbone'
+"Bundle 'mklabs/vim-backbone'
+Bundle 'jnwhiteh/vim-golang'
 
 filetype plugin indent on
 
