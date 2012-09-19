@@ -61,6 +61,7 @@ nmap <silent> <leader>s :set spell!<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 'rc'
 nmap <leader>t :CtrlP<CR>
+nmap <leader>ct :CtrlPClearCache<CR>
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
