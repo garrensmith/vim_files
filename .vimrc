@@ -22,6 +22,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'snipMate'
 "Bundle 'mklabs/vim-backbone'
 Bundle 'jnwhiteh/vim-golang'
+Bundle "pangloss/vim-javascript"
 
 filetype plugin indent on
 
@@ -80,6 +81,7 @@ au BufRead,BufNewFile *.json set ft=javascript
 au BufRead,BufNewFile *.mustache set ft=html
 au BufNewFile,BufRead *[Ss]pec.js,*SpecHelper.js set filetype=jasmine.javascript
 au BufNewFile,BufRead *[Ss]pec.coffee,*SpecHelper.coffee set filetype=jasmine.coffee
+au BufNewFile,BufRead *.t set filetype=erlang
 
 " disable cindent for JavaScript for sane indentation.
 "au FileType javascript setlocal nocindent sw=4 sts=4
